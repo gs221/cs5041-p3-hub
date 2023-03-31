@@ -26,7 +26,7 @@ let messageParts = _py.py_string_split(receivedString, ":")
             player_list.push(player)
         }
         // send palyer list to controllers
-        playerListString = "playerlist:" + player_list.join(",")
+        playerListString = "pl:" + player_list.join("")
         radio.sendString(playerListString)
     }
     if (messageParts[0] == "vote") {
